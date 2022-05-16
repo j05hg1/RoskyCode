@@ -13,25 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
+        //Creacion tabla Usuarios
         Schema::create('tbusuarios', function (Blueprint $table) {
-            $table->engine="InnoDb";
-            $table->bigIncrements('idusuario');
-            $table->bigInteger('idtipousuario')->unsigned();
-            $table->bigInteger('ididentificacion')->unsigned();
-            $table->var("numero_identificacion");
-            $table->var("nombre1");
-            $table->var("nombre2");
-            $table->var("apellido1");
-            $table->var("apellido2");
-            $table->var("nombre_usuario");
-            $table->var("contraseña");
-            $table->var("direccion");
-            $table->var("correo");
-            $table->var("telefono");
-            $table->timestamps();
+            
+            $table->engine="InnoDB"; //cascada
+            $table->bigIncrements('idusuario'); //autoincremento en tabla
+            $table->varchar('nombre');
+            $table->varchar('apellido');
+            $table->varchar('direccion');
+            $table->varchar('telefono');
+            $table->timestamps(); //tiempo registrado
 
+            /* ejemplo a tablas relacionadas
             $table->foreign("idtipousuario")->references("idtipousuario")->on("tbtipousuarios")->onDelete("cascade");
             $table->foreign("ididentificacion")->references("ididentificacion")->on("tbtipoidentificacion")->onDelete("cascade");
+            */
+
         });
     }
 

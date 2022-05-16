@@ -14,14 +14,15 @@ return new class extends Migration
     public function up()
     {
         //Creacion tabla Usuarios
+        // php artisan migrate = migra este archivo a la BD
         Schema::create('tbusuarios', function (Blueprint $table) {
             
             $table->engine="InnoDB"; //cascada
             $table->bigIncrements('idusuario'); //autoincremento en tabla
-            $table->varchar('nombre');
-            $table->varchar('apellido');
-            $table->varchar('direccion');
-            $table->varchar('telefono');
+            $table->string('nombre');
+            $table->string('apellido');
+            $table->string('direccion');
+            $table->string('telefono');
             $table->timestamps(); //tiempo registrado
 
             /* ejemplo a tablas relacionadas

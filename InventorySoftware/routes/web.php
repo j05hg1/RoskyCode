@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::resource('usuarios', App\Http\Controllers\TbusuarioController::class);
+
+Route::resource('tipoidentificacion', App\Http\Controllers\TbidentificacionController::class);
+
+Route::resource('tipousuario', App\Http\Controllers\TbtipousuarioController::class);

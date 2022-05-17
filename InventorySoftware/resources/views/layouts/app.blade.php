@@ -33,23 +33,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                           
 
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
-
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('usuarios.index') }}">{{ __('Usuarios') }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('tipoidentificacion.index') }}">{{ __('Identificacion') }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('tipousuario.index') }}">{{ __('Tipo de Usuario') }}</a>
-                                </li>
-
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))

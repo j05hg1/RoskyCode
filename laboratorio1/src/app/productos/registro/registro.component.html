@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="starter-template">
+    <div class="row">
+      <div class="col-md-12 mt-5">
+        <h2> Registro Productos</h2>
+        <hr>
+        <form>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" class="form-control" placeholder="nombre producto"
+              [(ngModel)]="producto.nombre">
+          </div>
+          <div class="form-group">
+            <label for="precio">Precio</label>
+            <input type="number" name="precio" class="form-control" placeholder="precio" id="precio"
+              [(ngModel)]="producto.precio">
+          </div>
+          <div class="form-group">
+            <label for="stock">Stock</label>
+            <input type="number" name="stock" class="form-control" placeholder="stock" id="stock"
+              [(ngModel)]="producto.stock">
+          </div>
+          <div class="form-group">
+            <button *ngIf="producto.id < 0" class="btn btn-success" (click)="registrar()">Guardar</button> 
+            
+            <button *ngIf="producto.id > 0" class="btn btn-success" (click)="actualizar()">Actualizar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

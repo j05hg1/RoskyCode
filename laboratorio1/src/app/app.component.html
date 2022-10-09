@@ -1,0 +1,10 @@
+<div class="container bg-dark text-light">
+    <br>
+    <h1 class="text-center ">Gestión Productos - Uso de Servicios</h1>
+    <br>
+</div>
+
+<app-registro #register [listar] = "listado"></app-registro>
+<br/>
+<hr>
+<app-listado #listado [register] = "register"></app-listado>
